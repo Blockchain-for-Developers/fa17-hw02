@@ -24,15 +24,15 @@ Build a simple betting contract that rewards correct guesses of outcomes. This c
 
 ## Example
 
-1. The contract is deployed, owner and outcomes are set
+1. The contract is deployed, owner and outcomes are set (e.g. [1, 2, 3, 4])
 2. Owner chooses their oracle
-3. User at address A makes a bet of 50 wei on outcome A, becomes gamblerA
-4. User at address B makes a bet of 210 wei on outcome B, becomes gamblerB
-5. User at address A makes a bet on outcome C, is not allowed to do so (each gambler can only bet once)
+3. User at address A makes a bet of 50 wei on outcome 1, becomes gamblerA
+4. User at address B makes a bet of 210 wei on outcome 2, becomes gamblerB
+5. User at address A makes a bet on outcome 3, is not allowed to do so (each gambler can only bet once)
 6. User at address G tries to make a bet, is not allowed to do so (only two gamblers in the vanilla contract)
-7. Oracle decided on the correct outcome, chooses outcome B
+7. Oracle decided on the correct outcome, chooses outcome 2
 8. Winnings are dispersed, the game is over and gamblerA and gamblerB are removed from the game
-9. User at address B withdraws the winnings they earned (260 wei) when they gambled on outcome B
+9. User at address B withdraws the winnings they earned (260 wei) when they gambled on outcome 2
 
 ## Extra Credit
 * (HARD) There can be multiple gamblers
