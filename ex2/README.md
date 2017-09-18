@@ -1,6 +1,9 @@
 # Betting Contract
 Build a simple betting contract that rewards correct guesses of outcomes. This contract utilizes aspects of game theory; you may want to use a paper and pen to make a note of possible game states that may arise.
 
+**All work should be done in contracts/Betting_skeleton.sol
+When you are ready to test, please rename this to contracts/BettingContract.sol**
+
 ## Rules
 * There can only be one contract owner
 * Bets to the contract will be comprised of both: an amount of Ether bet and the gambler's expected outcome

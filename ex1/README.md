@@ -10,7 +10,9 @@ To do so you must
 4. Deploy the smart contract to a test blockchain
 5. Use `truffle console` then call the deployed contract's `greet()` function
 
-Note: `Greeter.sol` is the same as *Homework 1*'s **ex1**. As such, it has been completed for you.
+**All work can be done by `cd`ing into ex1's root directory (this one).**
+
+Note: `contract/Greeter.sol` is the same as *Homework 1*'s **ex1**. As such, it has been completed for you.
 
 ## First, a brief introduction on each of the tools we will be using and the versions that you will need to download:
 ### Windows Users go [HERE](http://truffleframework.com/tutorials/how-to-install-truffle-and-testrpc-on-windows-for-blockchain-development)
