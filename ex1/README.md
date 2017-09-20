@@ -3,7 +3,7 @@ Your task is simply to output the following in your console via the tools/framew
 
     "Hello World"
 
-To do so you must
+To do so you must:
 1. Download this repository
 2. Download the required software dependencies
 3. Compile the provided `Greeter.sol` "Hello World" smart contract
@@ -35,7 +35,7 @@ Be sure to have a testrpc server running in a separate terminal.
 ## Truffle Console
 
 Once your greeter passes the test:
-1. Run `truffle migrate`. (Dont worry about migrations, we will teach you everything once you've joined B@B)
+1. Run `truffle migrate`.
 2. Run `truffle console`. This will open up a Node JavaScript console that is connected to your testrpc server. Find a way to reference the Greeter smart contract that you deployed and call both the **Constructor** and **`greet()`** functions. [Truffle console docs](http://truffleframework.com/docs/getting_started/console)
 
 If your greeter returns "Hello World!" when prompted, then you have successfully completed the exercise. However, know that moving forward in the course, you will need to maximize your ability and knowledge of the tools and frameworks used in Ethereum Development.
