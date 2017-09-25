@@ -1,22 +1,21 @@
 pragma solidity ^0.4.15;
+
+/** @title Greeter */
 contract Greeter {
+	/* Global variable that our greeter will output when poked */
+	string greeting;
 
-    string greeting; //global variable that our greeter will say when poked
+	/** @dev Contract constructor that sets the global `greeting` variable
+	  * @param _greeting A STRING value to set the global `greeting` to
+	  */
+	function Greeter(string _greeting) {
+		greeting = _greeting;
+	}
 
-    /*
-     * Constructor function
-     */
-    /// @dev Contract constructor that sets the global `greeting` variable
-    /// @param _greeting A String value to set to the global `greeting`
-    function greeter(string _greeting) public {
-        greeting = _greeting;
-    }
-
-    /*
-     * Greet function
-     */
-    /// @dev returns the String value stored in the global `greeting` variable
-    function greet() constant returns (string) {
-        return greeting;
-    }
+	/** Greet function
+	  * @return greeting The STRING value stored in the global `greeting` variable
+	  */
+	function greet() constant returns (string) {
+		return greeting;
+	}
 }
