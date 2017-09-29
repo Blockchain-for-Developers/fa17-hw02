@@ -2,6 +2,6 @@ var Betting = artifacts.require("./Betting.sol");
 
 module.exports = function(deployer) {
 	/* Input value to constructor on contract deployment */
-	var testOutcomes = [1, 2, 3];
+	const testOutcomes = [1, 2, 3];
 	deployer.deploy(Betting, testOutcomes);
 };
