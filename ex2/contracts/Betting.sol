@@ -6,7 +6,6 @@ contract Betting {
 	address public gamblerA;
 	address public gamblerB;
 	address public oracle;
-	uint[] outcomes;		// Feel free to replace with a mapping
 
 	/* Structs are custom data structures with self-defined parameters */
 	struct Bet {
@@ -19,6 +18,8 @@ contract Betting {
 	mapping (address => Bet) bets;
 	/* Keep track of every player's winnings (if any) */
 	mapping (address => uint) winnings;
+	/* Keep track of all outcomes (maps index to numerical outcome) */
+	mapping (uint => uint) public outcomes;
 
 	/* Add any events you think are necessary */
 	event BetMade(address gambler);
@@ -37,10 +38,19 @@ contract Betting {
 		}
 	}
 
+	modifier OutcomeExists(uint outcome) {
+		if (outcomes[outcome] != 0) {
+			_;
+		}
+	}
+
 	/* Constructor function, where owner and outcomes are set */
 	function Betting(uint[] _outcomes) {
 		owner = msg.sender;
-		outcomes = _outcomes;
+		// Not recommended! Can you think of a different way to set outcomes?
+		for (uint i = 0; i < _outcomes.length; i++) {
+			outcomes[i] = _outcomes[i];
+		}
 	}
 
 	/* Owner chooses their trusted Oracle */
@@ -73,7 +83,7 @@ contract Betting {
 	}
 
 	/* The oracle chooses which outcome wins */
-	function makeDecision(uint _outcome) OracleOnly() {
+	function makeDecision(uint _outcome) OracleOnly() OutcomeExists(_outcome) {
 		Bet storage gA = bets[gamblerA];
 		Bet storage gB = bets[gamblerB];
 		if (gA.outcome == gB.outcome) {
@@ -101,8 +111,8 @@ contract Betting {
 	}
 
 	/* Allow anyone to check the outcomes they can bet on */
-	function checkOutcomes() constant returns (uint[]) {
-		return outcomes;
+	function checkOutcomes(uint outcome) constant returns (uint) {
+		return outcomes[outcome];
 	}
 
 	/* Allow anyone to check if they won any bets */
