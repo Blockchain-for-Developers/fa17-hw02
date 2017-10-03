@@ -13,6 +13,6 @@ For **ex2** you'll be coding up a complicated betting smart contract. This is si
 
 ## Submission Instructions
 
-Please fork this repo and push your code up to your fork. Please fill out this Google form to let us know where you've got your answers: https://goo.gl/forms/XDnV9J1k9lM2f8312.
+Please fork this repo and push your code up to your fork. Please fill out this Google Form to let us know where you've got your answers: https://goo.gl/forms/XDnV9J1k9lM2f8312.
 
 Please feel free to reach out to the staff via Piazza should you run into any trouble.
